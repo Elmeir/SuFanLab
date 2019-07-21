@@ -9,7 +9,6 @@
             <Actions>
               <Action OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="20.25" TextAuraEffect="None" ActionType="TextAura" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetString" VariableName="bufftime" VariableExpression="${duration}" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraName="分摊" TextAuraExpression="分摊${numeric:round(${duration}-${_since})}" TextAuraXIniExpression="1095" TextAuraYIniExpression="500" TextAuraWIniExpression="134" TextAuraHIniExpression="49" TextAuraOIniExpression="100" TextAuraFontName="微软雅黑" TextAuraForeground="White" TextAuraBackground="Black" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
                 <Condition Enabled="false" Grouping="And" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="And" />
@@ -18,12 +17,11 @@
             <Actions>
               <Action OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="30" TextAuraEffect="None" ActionType="TextAura" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetString" VariableName="bufftime" VariableExpression="${duration}" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="DeactivateAura" TextAuraName="石化" TextAuraExpression="${numeric:${duration}-${_since}}" TextAuraXIniExpression="996" TextAuraYIniExpression="487" TextAuraWIniExpression="217" TextAuraHIniExpression="63" TextAuraOIniExpression="100" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="And" />
           </Trigger>
-          <Trigger Enabled="true" Source="Log" Name="火3" Id="856c6688-1806-4a61-b5d6-59b36fffed47" RegularExpression="^\[[0-9.:]{12}\] 1A:[0-9a-fA-F]{8}:(?&lt;name&gt;[a-zA-Z\-' ]{5,21}) gains the effect of (Spell-In-Waiting: Dark Fire III|ディレイスペル：ダークファイガ) from [A-Z]{0,1}[a-z]{0,15} for (?&lt;duration&gt;[0-9\.]{4,5}) Seconds\.$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+          <Trigger Enabled="true" Source="Log" Name="火3" Id="856c6688-1806-4a61-b5d6-59b36fffed47" RegularExpression="^\[[0-9.:]{12}\] 1A:[0-9a-fA-F]{8}:(?&lt;name&gt;[a-zA-Z\-' ]{5,21}) gains the effect of (Spell-In-Waiting: Dark Fire III|ディレイスペル：ダークファイガ) from [A-Z]{0,1}[a-z]{0,15} for 9999.00 Seconds\.$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
             <Actions>
               <Action OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" ActionType="UseTTS" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSTextExpression="火火火" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
                 <Condition Enabled="true" Grouping="And">
@@ -33,7 +31,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Source="Log" Name="吹飞" Id="1bccfca0-506e-4162-9da3-268ca4238c49" RegularExpression="^\[[0-9.:]{12}\] 03:4000[0-9A-F]{4}:Added new combatant (The Hand Of Erebos|エレボスの巨腕).  Job: 0 Level: 80 Max HP: 148000 Max MP: 10000 Pos: \((?&lt;pos&gt;50|150),100,0\) \(83800000010510\)\.$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
             <Actions>
@@ -41,11 +38,57 @@
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${pos}" ExpressionTypeL="String" ExpressionR="50" ExpressionTypeR="String" ConditionType="NumericEqual" />
                 </Condition>
-                <Conditions />
               </Action>
               <Action OrderNumber="2" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" ActionType="UseTTS" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySpeechMyself="True" UseTTSTextExpression="右右右" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="??" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${pos}" ExpressionTypeL="String" ExpressionR="150" ExpressionTypeR="String" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Source="Log" Name="分摊 关闭" Id="ffaa49cb-b618-4c16-88c5-fb609154fbf8" RegularExpression="\blose[s]? the effect of (Spell-In-Waiting: Unholy Darkness|ディレイスペル：ダークホーリー) from [A-Z]{0,1}[a-z]{0,15}\.$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="30" TextAuraEffect="None" ActionType="TextAura" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetString" VariableName="bufftime" VariableExpression="${duration}" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="DeactivateAura" TextAuraName="分摊" TextAuraExpression="${numeric:${duration}-${_since}}" TextAuraXIniExpression="996" TextAuraYIniExpression="487" TextAuraWIniExpression="217" TextAuraHIniExpression="63" TextAuraOIniExpression="100" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="And" />
+          </Trigger>
+          <Trigger Enabled="true" Source="Log" Name="石化 倒计时" Id="e864b2af-110d-4eca-af02-ccc005d40def" RegularExpression="^\[[0-9.:]{12}\] 1A:[0-9a-fA-F]{8}:(?&lt;name&gt;[a-zA-Z\-' ]{5,21}) gains the effect of (Spell-In-Waiting: Shadoweye|ディレイスペル：シャドウアイ) from [A-Z]{0,1}[a-z]{0,15} for (?&lt;duration&gt;[0-9\.]{4,5}) Seconds\.$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="20.25" TextAuraEffect="None" ActionType="TextAura" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetString" VariableName="bufftime" VariableExpression="${duration}" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraName="石化" TextAuraExpression="石化${numeric:round(${duration}-${_since})}" TextAuraXIniExpression="1095" TextAuraYIniExpression="546" TextAuraWIniExpression="134" TextAuraHIniExpression="49" TextAuraOIniExpression="100" TextAuraFontName="微软雅黑" TextAuraForeground="White" TextAuraBackground="Black" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="And" />
+          </Trigger>
+          <Trigger Enabled="true" Source="Log" Name="石化" Id="02158367-9630-4a70-9718-39662e6c4b68" RegularExpression="^\[[0-9.:]{12}\] 1B:[0-9a-fA-F]{8}:(?&lt;name&gt;[a-zA-Z\-' ]+):0000:[0-9A-F]{4}:00B3:0000:0000:0000:$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" ActionType="UseTTS" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSTextExpression="石化" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder FFXIVJobFilterEnabled="false" FFXIVJobFilter="0" ZoneFilterEnabled="false" EventFilterEnabled="false" Id="c1a0c674-d121-4451-8623-b955a57f7bce" Name="3" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Source="Log" Name="激光" Id="4022c7ab-eb64-4901-a453-7728b6efb0d7" RegularExpression="^\[[0-9.:]{12}\] 14:3FC(?&lt;ID&gt;D|E):Leviathan starts using Temporary Current on Leviathan\.$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" ActionType="UseTTS" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSTextExpression="右上" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${ID}" ExpressionTypeL="String" ExpressionR="D" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" ActionType="UseTTS" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSTextExpression="左上" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="??" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${ID}" ExpressionTypeL="String" ExpressionR="E" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
                 <Conditions />
               </Action>
@@ -53,31 +96,27 @@
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Source="Log" Name="分摊 关闭" Id="ffaa49cb-b618-4c16-88c5-fb609154fbf8" RegularExpression="\blose[s]? the effect of (Spell-In-Waiting: Unholy Darkness|ディレイスペル：ダークホーリー) from [A-Z]{0,1}[a-z]{0,15}\.$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+          <Trigger Enabled="true" Source="Log" Name="水柱" Id="b73104c4-edb4-4ba5-b2f4-f58a935ad873" RegularExpression="^\[[0-9.:]{12}\] 15:4000[0-9A-F]{4}:Leviathan:3FD2:Tidal Wave:" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
             <Actions>
-              <Action OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="30" TextAuraEffect="None" ActionType="TextAura" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetString" VariableName="bufftime" VariableExpression="${duration}" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="DeactivateAura" TextAuraName="分摊" TextAuraExpression="${numeric:${duration}-${_since}}" TextAuraXIniExpression="996" TextAuraYIniExpression="487" TextAuraWIniExpression="217" TextAuraHIniExpression="63" TextAuraOIniExpression="100" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
+              <Action OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" ActionType="UseTTS" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSTextExpression="水柱" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
             </Actions>
-            <Condition Enabled="false" Grouping="And" />
+            <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Source="Log" Name="石化 倒计时" Id="e864b2af-110d-4eca-af02-ccc005d40def" RegularExpression="^\[[0-9.:]{12}\] 1A:[0-9a-fA-F]{8}:(?&lt;name&gt;[a-zA-Z\-' ]{5,21}) gains the effect of (Spell-In-Waiting: Shadoweye|ディレイスペル：シャドウアイ) from [A-Z]{0,1}[a-z]{0,15} for (?&lt;duration&gt;[0-9\.]{4,5}) Seconds\.$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+          <Trigger Enabled="true" Source="Log" Name="地板" Id="f9efc98a-d0c9-478a-9e72-7fe021a741d0" RegularExpression="^\[[0-9.:]{12}\] 14:3F(?&lt;ID&gt;D0|CF):Leviathan starts using Undersea Quake on Leviathan\.$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
             <Actions>
-              <Action OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="20.25" TextAuraEffect="None" ActionType="TextAura" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetString" VariableName="bufftime" VariableExpression="${duration}" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraName="石化" TextAuraExpression="石化${numeric:round(${duration}-${_since})}" TextAuraXIniExpression="1095" TextAuraYIniExpression="546" TextAuraWIniExpression="134" TextAuraHIniExpression="49" TextAuraOIniExpression="100" TextAuraFontName="微软雅黑" TextAuraForeground="White" TextAuraBackground="Black" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
-                <Condition Enabled="false" Grouping="And" />
+              <Action OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" ActionType="UseTTS" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSTextExpression="去中间" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${ID}" ExpressionTypeL="String" ExpressionR="D0" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
                 <Conditions />
               </Action>
-            </Actions>
-            <Condition Enabled="false" Grouping="And" />
-            <Conditions />
-          </Trigger>
-          <Trigger Enabled="true" Source="Log" Name="石化" Id="02158367-9630-4a70-9718-39662e6c4b68" RegularExpression="^\[[0-9.:]{12}\] 1B:[0-9a-fA-F]{8}:(?&lt;name&gt;[a-zA-Z\-' ]+):0000:[0-9A-F]{4}:00B3:0000:0000:0000:$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
-            <Actions>
-              <Action OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" ActionType="UseTTS" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSTextExpression="石化" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
+              <Action OrderNumber="2" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" ActionType="UseTTS" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSTextExpression="去两边" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="??" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  <ConditionSingle Enabled="true" ExpressionL="${ID}" ExpressionTypeL="String" ExpressionR="CF" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
                 <Conditions />
               </Action>
