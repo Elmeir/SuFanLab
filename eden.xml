@@ -25,7 +25,6 @@
             <Actions>
               <Action OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" ActionType="UseTTS" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSTextExpression="»ð»ð»ð" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="ËÎÌå" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
                 <Condition Enabled="false" Grouping="And" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="true" Grouping="And">
@@ -153,7 +152,6 @@
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
             </Condition>
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -176,7 +174,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Source="Log" Name="Õ¨µ¯:×¼±¸" Id="0954deb8-a98f-4faf-b30d-5646041e1004" RegularExpression="^\[[0-9.:]{12}\] 14:40EC:(Titan|¥¿¥¤¥¿¥ó) starts using Bomb Boulders on \1\.$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
             <Actions>
@@ -194,7 +191,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Source="Log" Name="Õ¨µ¯:Éú³É" Id="7abda2ab-8144-4d4a-9212-cc65dd9d1643" RegularExpression="^\[[0-9.:]{12}\] 03:4000(?&lt;ID&gt;[0-9A-F]{4}):Added new combatant (Bomb Boulder|¥Ü¥à¥Ü¥ë¥À©`)\.  Job: 0 Level: 80 Max HP: 148000 Max MP: 10000 Pos: \((?&lt;X&gt;[0-9]{2,3}),(?&lt;Y&gt;[0-9]{2,3}),(0|-2\.384186E-07|2\.384186E-07)\) \(83480000010637\)\.$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
             <Actions>
@@ -206,7 +202,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
-              <Action OrderNumber="3" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" ActionType="Variable" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetNumeric" VariableName="COUNT" VariableExpression="${COUNT}+1" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="??" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
+              <Action OrderNumber="3" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" ActionType="Variable" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetNumeric" VariableName="COUNT" VariableExpression="${var:COUNT}+1" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="??" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
@@ -233,7 +229,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Source="Log" Name="Õ¨µ¯:Á¬Ïß" Id="8dd789aa-b272-4162-bcef-99f13b92467a" RegularExpression="^\[[0-9.:]{12}\] 23:4000[0-9A-F]{4}:(Titan|¥¿¥¤¥¿¥ó):4000(?&lt;ID&gt;[0-9A-F]{4}):(Bomb Boulder|¥Ü¥à¥Ü¥ë¥À©`):" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
             <Actions>
@@ -289,7 +284,6 @@
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:COUNT}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Source="Log" Name="Õ¨µ¯:±¬Õ¨" Id="545ab83c-be23-4148-8678-7d7002f92353" RegularExpression="^\[[0-9.:]{12}\] 15:4000[0-9A-F]{4}:(Bomb Boulder|¥Ü¥à¥Ü¥ë¥À©`):[0-9A-F]{4}:Explosion:" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
             <Actions>
@@ -311,7 +305,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Source="Log" Name="Ê®×ÖÌø" Id="ee45de03-be1d-4763-984e-b04f29b1367b" RegularExpression="^\[[0-9.:]{12}\] 14:40FA:(Titan|¥¿¥¤¥¿¥ó) starts using Massive Landslide on \1\.$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
             <Actions>
@@ -321,7 +314,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Source="Log" Name="×óÓÒÌ®Ëú" Id="83afeb22-4aa3-4788-a00d-d926ba2f814f" RegularExpression="^\[[0-9.:]{12}\] 14:4(?&lt;ID&gt;0FF|100):(Titan|¥¿¥¤¥¿¥ó) starts using (Leftward|Rightward) Landslide on \2\.$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
             <Actions>
@@ -339,7 +331,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
