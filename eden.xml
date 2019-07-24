@@ -243,9 +243,9 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Source="Log" Name="泰坦飚车" Id="97cbc59a-7213-49b2-abdc-cb2256062d44" RegularExpression="^\[[0-9.:]{12}\] 14:4103:(Titan|タイタン) starts using Fault Zone on \1\.$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+          <Trigger Enabled="true" Source="Log" Name="车轮模式" Id="97cbc59a-7213-49b2-abdc-cb2256062d44" RegularExpression="^\[[0-9.:]{12}\] 14:4103:(Titan|タイタン) starts using Fault Zone on \1\.$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
             <Actions>
-              <Action OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" ActionType="UseTTS" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSTextExpression="冲冲冲" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
+              <Action OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" ActionType="UseTTS" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSTextExpression="去侧面" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
@@ -409,6 +409,16 @@
               <ConditionSingle Enabled="true" ExpressionL="${var:COUNT}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${var:COUNT}" ExpressionTypeL="Numeric" ExpressionR="9" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
             </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Source="Log" Name="护手模式" Id="29c1934e-3af1-4b29-b00f-78fdc2663790" RegularExpression="^\[[0-9.:]{12}\] 14:40FA:(Titan|タイタン) starts using Massive Landslide on \1\.$" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" ActionType="UseTTS" ExecutionDelayExpression="0" DebugLevel="Inherit" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" UseTTSTextExpression="去正面" UseTTSVolumeExpression="100" UseTTSRateExpression="0" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming" KeypressType="SendKeys">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
         </Triggers>
