@@ -7,17 +7,19 @@
           <Folder Id="c3d743da-8515-424c-888e-f70e3bc5a3ba" Name="E8S" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="双剑技" Id="fba4bd46-74d3-4d2b-a60b-15d2c951f059" RegularExpression="^\[[0-9.:]{12}\] 14:4D6(?&lt;id&gt;8|9):">
+              <Trigger Enabled="true" Name="舞踏技" Id="fba4bd46-74d3-4d2b-a60b-15d2c951f059" RegularExpression="^\[[0-9.:]{12}\] 14:4D(?&lt;id&gt;6F|70):">
                 <Actions>
-                  <Action OrderNumber="1" UseTTSTextExpression="先后再前" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="??" ActionType="UseTTS">
+                  <Action OrderNumber="1" UseTTSTextExpression="钢铁月环" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="??" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="8" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="6F" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
-                  <Action OrderNumber="2" UseTTSTextExpression="先前再后" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="??" ActionType="UseTTS">
+                  <Action OrderNumber="2" UseTTSTextExpression="月环钢铁" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="??" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="9" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="70" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
@@ -89,12 +91,27 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="Akh Rhai" Id="b08fff5a-1cee-4254-a2fd-6ed9f0d09f8c" RegularExpression="^\[[0-9.:]{12}\] 14:4D99" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="走走走" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="双剑技" Id="241bd335-da98-45a1-84d3-fed33e24ab49" RegularExpression="^\[[0-9.:]{12}\] 14:4D6(?&lt;id&gt;8|9):">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="先后再前" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="??" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="8" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" UseTTSTextExpression="先前再后" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="??" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="9" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
                     <Conditions />
                   </Action>
                 </Actions>
