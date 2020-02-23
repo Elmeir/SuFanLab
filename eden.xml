@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="b868cbf3-77f4-4c15-8b3c-fa849ffe5029" Name="希望的伊甸园" Enabled="true">
+  <ExportedFolder Id="b868cbf3-77f4-4c15-8b3c-fa849ffe5029" Name="希望的伊甸园：素粉特供版" Enabled="true">
     <Folders>
-      <Folder Id="4b43e3a9-2099-4568-9224-31b5d7f50d51" Name="共鸣篇" Enabled="true">
+      <Folder Id="4b43e3a9-2099-4568-9224-31b5d7f50d51" Name="共鸣篇：先行测试版" Enabled="true">
         <Folders>
           <Folder Id="c3d743da-8515-424c-888e-f70e3bc5a3ba" Name="E8S" Enabled="true">
             <Folders />
@@ -43,11 +43,13 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="6" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" UseTTSTextExpression="前前前" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="??" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="7" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
@@ -86,6 +88,7 @@
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="走走走" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
@@ -158,6 +161,51 @@
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="背对" Id="0a9d57d6-682b-43af-bfad-e76aafbccf4d" RegularExpression="\[[0-9.:]{12}\] 00:0044:シヴァ&amp;#x1F;光によりて、静寂を！$">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="背对" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" UseTTSTextExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="2000">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" UseTTSTextExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" UseTTSTextExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="10e4d786-12b0-48c5-9f45-adb580d510a1" Name="E7S" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="攻撃機動" Id="6dd47ce0-76b4-4518-a2c7-f6bf1e4ba8a5" RegularExpression="^\[[0-9.:]{12}\] 14:4C7(?&lt;id&gt;0|1):">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="钢铁" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="??" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" UseTTSTextExpression="月环" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="??" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
