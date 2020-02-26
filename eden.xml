@@ -58,7 +58,7 @@
                 <Triggers>
                   <Trigger Enabled="false" Name="镜子" Id="c533f33c-f4ee-434d-8ad1-432100c398cf" RegularExpression="^\[[0-9.:]{12}\] 14:4D7(?&lt;id&gt;5|6):(?&lt;boss&gt;シヴァ|Shiva)">
                     <Actions>
-                      <Action OrderNumber="1" LogMessageText="${_ffxiveparty[1].currenthp}" LogProcess="True" UseTTSTextExpression="正面正面逆时针" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                      <Action OrderNumber="1" LogMessageText="${_ffxiveparty[1].currenthp}" LogProcess="True" UseTTSTextExpression="正面正面逆时针" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="1200">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionGroup Enabled="true" Grouping="And">
                             <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:mirror}].x}" ExpressionTypeL="Numeric" ExpressionR="23.5" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
@@ -129,11 +129,9 @@
                     <Actions>
                       <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="c533f33c-f4ee-434d-8ad1-432100c398cf" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="${mirror}" VariableExpression="氷面鏡" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -142,15 +140,12 @@
                     <Actions>
                       <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="${mirror}" VariableExpression="Frozen Mirror" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="c533f33c-f4ee-434d-8ad1-432100c398cf" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -344,7 +339,6 @@
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="万变水波" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="2000">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
