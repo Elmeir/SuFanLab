@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="97ddc87d-0a26-4bc3-a361-505b9bcd69d0" Name="海德林" Enabled="true">
+    <Folders>
+      <Folder Id="57b5396e-a273-4086-8150-7025d55427bc" Name="buff" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="法杖" Id="52c9a071-eaa0-44fe-a2ca-983e6f4fa527" RegularExpression="^\[[0-9.:]{12}\] StatusAdd 1A:B3D:.*:(Hydaelyn|ハイデリン):00:17785784:$">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="远离" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="剑盾" Id="96d5feeb-94c5-4812-bc73-55d8917f834d" RegularExpression="^\[[0-9.:]{12}\] StatusAdd 1A:B3C:.*:(Hydaelyn|ハイデリン):00:17785784:$">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="十字" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="舞者" Id="0b8896d6-82ca-4dae-993d-c31611d0d057" RegularExpression="^\[[0-9.:]{12}\] StatusAdd 1A:B3E:.*:(Hydaelyn|ハイデリン):00:17785784:$">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="中央" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="3eedf2aa-8b8f-4893-9ab5-dfdc5909b13a" Name="skill" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="前后刀" Id="d29ce377-44a8-4d25-92b2-0e6ccf0c9553" RegularExpression="^\[[0-9.:]{12}\] StartsCasting 14:[0-9a-fA-F]{8}:(Hydaelyn|ハイデリン):(6C91|6F11):">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="左右" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="左右刀" Id="1a169ad0-5315-46b2-b5f2-c58e734469ca" RegularExpression="^\[[0-9.:]{12}\] StartsCasting 14:[0-9a-fA-F]{8}:(Hydaelyn|ハイデリン):(6F13|65C5):">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="前后" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="894be954-f8a0-4200-b283-11d980830518" Name="delay" Enabled="false">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="水" Id="5b5e9eb3-e193-4d75-910f-da490218a4d4" RegularExpression="^\[[0-9.:]{12}\] StartsCasting 14:[0-9a-fA-F]{8}:(Hydaelyn|ハイデリン):659A:">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="水" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="冰" Id="94502d69-3271-4fa9-9e6c-9e06393df08f" RegularExpression="^\[[0-9.:]{12}\] StartsCasting 14:[0-9a-fA-F]{8}:(Hydaelyn|ハイデリン):(659C|659D):">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="冰" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers>
+      <Trigger Enabled="true" Name="战斗开始" Id="562a7ef3-7363-4a36-a47b-bcbba819cafc" RegularExpression="^\[[0-9.:]{12}\] ChatLog 00:0039::(Engage!|戦闘開始！)$">
+        <Actions>
+          <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="96d5feeb-94c5-4812-bc73-55d8917f834d" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="96d5feeb-94c5-4812-bc73-55d8917f834d" ActionType="Trigger" ExecutionDelayExpression="5000">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
