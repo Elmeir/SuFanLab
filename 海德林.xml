@@ -73,7 +73,6 @@
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="冰" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
@@ -82,7 +81,7 @@
       </Folder>
     </Folders>
     <Triggers>
-      <Trigger Enabled="true" Name="战斗开始" Id="562a7ef3-7363-4a36-a47b-bcbba819cafc" RegularExpression="^\[[0-9.:]{12}\] ChatLog 00:0039::(Engage\!|戦闘開始！)$">
+      <Trigger Enabled="true" Name="战斗开始" Id="562a7ef3-7363-4a36-a47b-bcbba819cafc" RegularExpression="^.{15}ChatLog 00:0039::(Engage\!|戦闘開始！)$">
         <Actions>
           <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="96d5feeb-94c5-4812-bc73-55d8917f834d" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
