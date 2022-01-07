@@ -4,92 +4,116 @@
     <Folders>
       <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^1005$" Id="8429f1f0-d4c3-4907-9702-8034f7babbfc" Name="P2S" Enabled="true">
         <Folders>
-          <Folder Id="fb93c709-4c23-4089-b547-92a7616973cb" Name="麻将" Enabled="true">
+          <Folder Id="91a1cd92-b741-42af-afe6-1c32bdea07cd" Name="麻将" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="false" Name="报数" Id="1bac770d-930d-491a-a4db-4081bf150868" RegularExpression="^.{15}TargetIcon 1B:[^:]*:(?&lt;name&gt;[^:]*):0000:(?&lt;type&gt;[^:]*):(?&lt;id&gt;[^:]*):0000:0000:0000">
+              <Trigger Enabled="true" Name="报数" Id="ee35bc8e-1731-48bb-ad7a-7552426723ec" RegularExpression="">
                 <Actions>
-                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="p2s_mj_offset" VariableExpression="${func:hex2dec:${id}}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Variable" ExecutionDelayExpression="0">
+                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="连线第一，BOSS对角" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:my_mj}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="连线第二，BOSS脚下" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:my_mj}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="连线第三，BOSS对角" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:my_mj}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="连线第四，BOSS脚下" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:my_mj}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="5" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="第一第一" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:my_mj}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="6" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="第二第二" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:my_mj}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="5" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="7" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="第三第三" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:my_mj}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="8" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="第四第四" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:my_mj}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="7" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="触发" Id="2b8ad8b6-15a2-4757-bcc9-8fa539b225e0" RegularExpression="^.{15}AOEActionEffect 16:[^:]*:[^:]*:682F:" PeriodRefire="Deny" RefirePeriodExpression="5000">
+                <Actions>
+                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="874c51c6-d0eb-4cad-b3f2-6ccafea2892e" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="0">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="p2s_mj_offset" VariableExpression="${func:hex2dec:FFFF}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Variable" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="874c51c6-d0eb-4cad-b3f2-6ccafea2892e" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="10000">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="重置" Id="7ba0c66f-57cd-4588-bb0f-ec19ad76d68e" RegularExpression="^.{15}ChangeMap">
+                <Actions>
+                  <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableName="p2s_mj_offset" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Variable" ExecutionDelayExpression="0">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="false" Name="记录" Id="874c51c6-d0eb-4cad-b3f2-6ccafea2892e" RegularExpression="^.{15}TargetIcon 1B:[^:]*:(?&lt;name&gt;[^:]*):0000:(?&lt;type&gt;[^:]*):(?&lt;id&gt;[^:]*):0000:0000:0000">
+                <Actions>
+                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="p2s_mj_offset" VariableExpression="${func:hex2dec:${id}}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Variable" ExecutionDelayExpression="0" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}" ExpressionTypeL="Numeric" ExpressionR="${var:p2s_mj_offset}" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
                     </Condition>
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="2" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="蓝色第一，BOSS对角" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                  <Action OrderNumber="2" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="my_mj" VariableExpression="${func:hex2dec:${id}}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Variable" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="3" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="蓝色第二，BOSS脚下" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    </Condition>
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="4" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="蓝色第三，BOSS对角" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    </Condition>
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="5" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="蓝色第四，BOSS脚下" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    </Condition>
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="6" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="一一一一" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    </Condition>
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="7" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="二二二二" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="5" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    </Condition>
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="8" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="三三三三" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    </Condition>
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="9" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="四四四四" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="7" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                  <Action OrderNumber="3" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="my_mj" VariableExpression="${func:hex2dec:${id}}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="ee35bc8e-1731-48bb-ad7a-7552426723ec" TriggerForce="regexp,refire" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="100">
+                    <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                     <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="And" />
-              </Trigger>
-              <Trigger Enabled="true" Name="触发" Id="c82d6408-8e7c-4efb-ac91-e83462a8b433" RegularExpression="^.{15}AOEActionEffect 16:[^:]*:[^:]*:682F:" PeriodRefire="Deny" RefirePeriodExpression="5000">
-                <Actions>
-                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="1bac770d-930d-491a-a4db-4081bf150868" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="0">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="2" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="p2s_mj_offset" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Variable" ExecutionDelayExpression="0">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="3" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="1bac770d-930d-491a-a4db-4081bf150868" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="5000">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -99,7 +123,6 @@
             <Actions>
               <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="尾尾尾" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
@@ -108,27 +131,34 @@
             <Actions>
               <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="头头头" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
+          <Trigger Enabled="true" Name="防击退" Id="9f135d18-c29d-49ec-92a6-9372db17a22e" RegularExpression="^.{14} StartsCasting 14:[^:]*:[^:]*:682F:">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="防击退" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
         </Triggers>
       </Folder>
-      <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^1007$" Id="1c419d3d-1646-4e31-86e0-92be3a8f17de" Name="P3S by 尼尼" Enabled="true">
+      <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^1007$" Id="1c419d3d-1646-4e31-86e0-92be3a8f17de" Name="P3S" Enabled="true">
         <Folders>
-          <Folder Id="33723de6-0c3a-4aea-bb9a-552d4813c264" Name="一般tts" Enabled="true">
+          <Folder Id="33723de6-0c3a-4aea-bb9a-552d4813c264" Name="一般tts by 尼尼" Enabled="true">
             <Folders />
             <Triggers>
               <Trigger Enabled="true" Name="AOE" Id="6ecf4c26-e487-43a5-b246-a5b066d267bc" RegularExpression="^.{15}StartsCasting 14:(?&lt;caster_id&gt;4[0-9A-F]{7}):(?&lt;caster&gt;[^:]*?):6706:">
                 <Actions>
                   <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="AOE" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="放黑火" Id="b9e30ff5-f5ca-4a5f-8f27-91edf2969421" RegularExpression="^.{15}StartsCasting 14:(?&lt;caster_id&gt;4[0-9A-F]{7}):(?&lt;caster&gt;[^:]*?):66B9:">
                 <Actions>
@@ -138,47 +168,38 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="接线" Id="7bdacc51-9487-4f00-abc6-6353379c1ad4" RegularExpression="^.{15}StartsCasting 14:(?&lt;caster_id&gt;4[0-9A-F]{7}):(?&lt;caster&gt;[^:]*?):6700:">
                 <Actions>
                   <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="双T接线" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="钢铁" Id="2946d5c3-7d8c-41cf-9968-3dfbfcb75bbc" RegularExpression="^.{15}StartsCasting 14:(?&lt;caster_id&gt;4[0-9A-F]{7}):(?&lt;caster&gt;[^:]*?):66BE:">
                 <Actions>
                   <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="钢铁，集合诱导" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="左翼" Id="95d9be2c-9dd2-4cd9-bcb9-2c7b95e18329" RegularExpression="^.{15}StartsCasting 14:(?&lt;caster_id&gt;4[0-9A-F]{7}):(?&lt;caster&gt;[^:]*?):6703:">
                 <Actions>
                   <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="右侧安全" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="九连环" Id="e5d79492-05bd-47e0-b4aa-d2022974cd74" RegularExpression="^.{15}StartsCasting 14:(?&lt;caster_id&gt;4[0-9A-F]{7}):(?&lt;caster&gt;[^:]*?):66C0:">
                 <Actions>
                   <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="九连环" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="右翼" Id="49a22899-6ded-416d-a64d-fff9a6b895e1" RegularExpression="^.{15}StartsCasting 14:(?&lt;caster_id&gt;4[0-9A-F]{7}):(?&lt;caster&gt;[^:]*?):6702:">
                 <Actions>
@@ -188,17 +209,14 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="十字火" Id="5200f6a5-eacb-4cbf-8efb-93406cae8f3b" RegularExpression="^.{15}StartsCasting 14:(?&lt;caster_id&gt;4[0-9A-F]{7}):(?&lt;caster&gt;[^:]*?):66CE:">
                 <Actions>
                   <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="十字火，中央集合待机" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="热喷射" Id="fb7b06f2-cbcc-419b-b2ea-839c0ffc829a" RegularExpression="^.{15}StartsCasting 14:(?&lt;caster_id&gt;4[0-9A-F]{7}):(?&lt;caster&gt;[^:]*?):6704:">
                 <Actions>
@@ -208,9 +226,8 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="Or" />
-                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="中央两两分摊" Id="7cd4742b-de48-4b2a-9847-6ae52fa4adf4" RegularExpression="^.{15}StartsCasting 14:(?&lt;caster_id&gt;4[0-9A-F]{7}):(?&lt;caster&gt;[^:]*?):67FC:">
+              <Trigger Enabled="true" Name="中央两两分摊" Id="7cd4742b-de48-4b2a-9847-6ae52fa4adf4" RegularExpression="^.{15}StartsCasting 14:(?&lt;caster_id&gt;4[0-9A-F]{7}):(?&lt;caster&gt;[^:]*?):66FC:">
                 <Actions>
                   <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="中央两两分摊" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
                     <Condition Enabled="false" Grouping="Or" />
@@ -218,9 +235,8 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="Or" />
-                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="两侧巴哈散开" Id="bec597ba-cbfd-44bc-8aca-77d327d8d7c1" RegularExpression="^.{15}StartsCasting 14:(?&lt;caster_id&gt;4[0-9A-F]{7}):(?&lt;caster&gt;[^:]*?):67FB:">
+              <Trigger Enabled="true" Name="两侧巴哈散开" Id="bec597ba-cbfd-44bc-8aca-77d327d8d7c1" RegularExpression="^.{15}StartsCasting 14:(?&lt;caster_id&gt;4[0-9A-F]{7}):(?&lt;caster&gt;[^:]*?):66FB:">
                 <Actions>
                   <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="两侧巴哈散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
                     <Condition Enabled="false" Grouping="Or" />
@@ -228,7 +244,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="火龙卷阶段时间轴" Id="7268b3d7-74d0-4a62-81bf-6181672cab21" RegularExpression="^.{15}StartsCasting 14:(?&lt;caster_id&gt;4[0-9A-F]{7}):(?&lt;caster&gt;[^:]*?):66F0:">
                 <Actions>
@@ -254,6 +269,27 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="灵泉" Id="1488d0f7-9dce-4243-a0c5-37b95557d2ca" RegularExpression="^.{15}StartsCasting 14:[^:]*:[^:]*:66E7:">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="准备灵泉" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" UseTTSTextExpression="第一组靠近" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="4000">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" UseTTSTextExpression="第二组靠近" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" UseTTSTextExpression="第三组靠近" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
             </Triggers>
@@ -261,90 +297,110 @@
           <Folder Id="bacc82d3-63d3-4a98-8c4d-f03c0600493c" Name="麻将" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="false" Name="报数" Id="4d93d0b4-c933-4a8c-9edd-7f9f6034b1dd" RegularExpression="^.{15}TargetIcon 1B:[^:]*:(?&lt;name&gt;[^:]*):0000:(?&lt;type&gt;[^:]*):(?&lt;id&gt;[^:]*):0000:0000:0000">
+              <Trigger Enabled="true" Name="报数" Id="4d93d0b4-c933-4a8c-9edd-7f9f6034b1dd" RegularExpression="">
                 <Actions>
-                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="p2s_mj_offset" VariableExpression="${func:hex2dec:${id}}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Variable" ExecutionDelayExpression="0">
+                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="第一第一" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:my_mj}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="第二第二" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:my_mj}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="第三第三" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:my_mj}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="第四第四" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:my_mj}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="5" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="第一第一" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:my_mj}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="6" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="第二第二" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:my_mj}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="5" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="7" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="第三第三" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:my_mj}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="8" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="第四第四" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:my_mj}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="7" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="And" />
+              </Trigger>
+              <Trigger Enabled="true" Name="触发" Id="918f0127-7c17-451f-bee8-a1eced6fb3f0" RegularExpression="^.{15}ActionEffect 15:[^:]*:[^:]*:66B9:" PeriodRefire="Deny" RefirePeriodExpression="5000">
+                <Actions>
+                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="f7555a2e-7164-46bb-9f00-17ec36312c97" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="0">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="p2s_mj_offset" VariableExpression="${func:hex2dec:FFFF}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Variable" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="f7555a2e-7164-46bb-9f00-17ec36312c97" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="10000">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="重置" Id="a82bc5d6-01da-4a37-9f35-8dab7409600f" RegularExpression="^.{15}ChangeMap">
+                <Actions>
+                  <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableName="p2s_mj_offset" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Variable" ExecutionDelayExpression="0">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="false" Name="记录" Id="f7555a2e-7164-46bb-9f00-17ec36312c97" RegularExpression="^.{15}TargetIcon 1B:[^:]*:(?&lt;name&gt;[^:]*):0000:(?&lt;type&gt;[^:]*):(?&lt;id&gt;[^:]*):0000:0000:0000">
+                <Actions>
+                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="p2s_mj_offset" VariableExpression="${func:hex2dec:${id}}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Variable" ExecutionDelayExpression="0" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}" ExpressionTypeL="Numeric" ExpressionR="${var:p2s_mj_offset}" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
                     </Condition>
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="2" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="一一一一" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                  <Action OrderNumber="2" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="my_mj" VariableExpression="${func:hex2dec:${id}}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Variable" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="3" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="二二二二" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    </Condition>
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="4" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="三三三三" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    </Condition>
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="5" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="四四四四" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    </Condition>
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="6" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="一一一一" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    </Condition>
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="7" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="二二二二" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="5" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    </Condition>
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="8" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="三三三三" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    </Condition>
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="9" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="四四四四" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="UseTTS" ExecutionDelayExpression="0">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${func:hex2dec:${id}}-${var:p2s_mj_offset}" ExpressionTypeL="Numeric" ExpressionR="7" ExpressionTypeR="Numeric" ConditionType="RegexMatch" />
+                  <Action OrderNumber="3" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="my_mj" VariableExpression="${func:hex2dec:${id}}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="4d93d0b4-c933-4a8c-9edd-7f9f6034b1dd" TriggerForce="regexp,refire" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="100">
+                    <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                     <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="And" />
-                <Conditions />
-              </Trigger>
-              <Trigger Enabled="true" Name="触发" Id="918f0127-7c17-451f-bee8-a1eced6fb3f0" RegularExpression="^.{15}ActionEffect 15:[^:]*:[^:]*:66B9:" PeriodRefire="Deny" RefirePeriodExpression="5000">
-                <Actions>
-                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="4d93d0b4-c933-4a8c-9edd-7f9f6034b1dd" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="0">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="2" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="p2s_mj_offset" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Variable" ExecutionDelayExpression="0">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="3" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="4d93d0b4-c933-4a8c-9edd-7f9f6034b1dd" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="10000">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
             </Triggers>
