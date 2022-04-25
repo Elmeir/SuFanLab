@@ -1,1 +1,2 @@
 # Triggernometry
+存放一些国际服开荒的早期触发器
