@@ -57,7 +57,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="左右后刀" Id="beafc422-e969-4cc1-9c59-2d763c601a1d" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;id&gt;63C0|63C1):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
@@ -73,7 +72,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -91,7 +89,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="先月环后钢铁" Id="266d2738-6e25-427c-af60-be41463fcbf1" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6713):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
                     <Actions>
@@ -100,23 +97,21 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="先月环后钢铁：即将生效" Id="7f909c7e-0b73-4146-b2fe-3a33fac881e3" RegularExpression="^.{15}ActionEffect 15:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6713):(?&lt;skill&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):(?&lt;bid&gt;[^:]*):(?&lt;damage&gt;[^:]{4})">
                     <Actions>
-                      <Action OrderNumber="1" UseTTSTextExpression="月环" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3000">
+                      <Action OrderNumber="1" UseTTSTextExpression="月环" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="2000">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="2" UseTTSTextExpression="钢铁" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                      <Action OrderNumber="2" UseTTSTextExpression="钢铁" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="2000">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="先钢铁后月环：即将生效" Id="db137e57-8d46-4444-8791-d45641af4555" RegularExpression="^.{15}ActionEffect 15:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6712):(?&lt;skill&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):(?&lt;bid&gt;[^:]*):(?&lt;damage&gt;[^:]{4})">
                     <Actions>
-                      <Action OrderNumber="1" UseTTSTextExpression="钢铁" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3000">
+                      <Action OrderNumber="1" UseTTSTextExpression="钢铁" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="2000">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                       <Action OrderNumber="2" UseTTSTextExpression="月环" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="2000">
@@ -124,7 +119,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -145,7 +139,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Sequential="True" Name="点名2" Id="9d5dc064-a57c-42d5-9146-d8f46293ba86" RegularExpression="^.{15}StatusAdd 1A:(BBD):(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):00:(?&lt;effect&gt;[^:]*):">
                     <Actions>
@@ -161,7 +154,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Sequential="True" Name="点名3" Id="ed70ec68-2661-485a-9eab-7672adfca0bd" RegularExpression="^.{15}StatusAdd 1A:(BBE):(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):00:(?&lt;effect&gt;[^:]*):">
                     <Actions>
@@ -177,7 +169,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -199,7 +190,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="成功踩塔" Id="b90d8e5f-dca8-4159-8a44-ed4165cfe088" RegularExpression="^.{15}StatusAdd 1A:(B7C):(?&lt;skill&gt;[^:]*):(7\.00):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):00:(?&lt;effect&gt;[^:]*):7083312">
                     <Actions>
@@ -216,7 +206,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -232,7 +221,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="点名1消失：点名3踩塔-&gt;点名2放塔" Id="b428570f-ab7d-402a-a2e3-e940c52ec867" RegularExpression="^.{15}StatusRemove 1E:(BBC):(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):00:(?&lt;effect&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="5000">
                 <Actions>
@@ -248,7 +236,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="点名2消失：点名1踩塔-&gt;点名3放塔" Id="96c1a86c-e5d6-4f74-8d6f-e541f2076d51" RegularExpression="^.{15}StatusRemove 1E:(BBD):(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):00:(?&lt;effect&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="5000">
                 <Actions>
@@ -264,7 +251,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="正面扇形" Id="9db99747-5224-4d66-ace8-4a7f17ce1d1f" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(670B):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
@@ -273,7 +259,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
