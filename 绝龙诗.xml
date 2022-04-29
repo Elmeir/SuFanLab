@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="e62a5109-df3e-4c90-8418-3426d262321b" Name="绝龙诗" Enabled="false">
+  <ExportedFolder Id="e62a5109-df3e-4c90-8418-3426d262321b" Name="绝龙诗" Enabled="true">
     <Folders>
       <Folder Id="eb08eec1-e3b1-469c-b9e4-4d056b3c06a2" Name="P1" Enabled="true">
         <Folders />
@@ -270,9 +270,6 @@
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="离开正面" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/p 扇形&lt;se.11&gt;&lt;se.11&gt;&lt;se.11&gt;&lt;se.11&gt;&lt;se.11&gt;" NamedCallbackName="command" NamedCallbackParam="/fc 分享狩獵坐標${var:hunt}次" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
-                    <Condition Enabled="false" Grouping="And" />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
