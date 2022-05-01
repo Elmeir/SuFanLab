@@ -2,7 +2,7 @@
 <TriggernometryExport Version="1">
   <ExportedFolder Id="e62a5109-df3e-4c90-8418-3426d262321b" Name="绝龙诗" Enabled="true">
     <Folders>
-      <Folder Id="eb08eec1-e3b1-469c-b9e4-4d056b3c06a2" Name="P1" Enabled="true">
+      <Folder Id="eb08eec1-e3b1-469c-b9e4-4d056b3c06a2" Name="P1：门神" Enabled="true">
         <Folders />
         <Triggers>
           <Trigger Enabled="true" Name="打断" Id="9d70c1f7-e136-46ea-821c-539ce29daa4c" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(62D0):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
@@ -39,7 +39,7 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder Id="a49dd7e7-eda6-45fa-9129-2ce383443efa" Name="P2" Enabled="true">
+      <Folder Id="a49dd7e7-eda6-45fa-9129-2ce383443efa" Name="P2：骑神" Enabled="true">
         <Folders />
         <Triggers>
           <Trigger Enabled="true" Name="引导" Id="e96012c6-3b04-4c5e-8d41-255e72915301" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(63C8):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
@@ -75,7 +75,7 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder Id="c63e2f63-a24c-44b7-aa6e-362e82194922" Name="P3（测试版）" Enabled="true">
+      <Folder Id="c63e2f63-a24c-44b7-aa6e-362e82194922" Name="P3：大师兄" Enabled="true">
         <Folders>
           <Folder Id="19d21b33-e244-4e44-81e2-5c5eba7f1936" Name="1运" Enabled="true">
             <Folders>
@@ -213,7 +213,7 @@
             <Triggers>
               <Trigger Enabled="true" Name="点名3消失：点名1和点名2踩塔" Id="61ebc57b-717e-44ab-9d7c-37f76d4033ad" RegularExpression="^.{15}StatusRemove 1E:(BBE):(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):00:(?&lt;effect&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="5000">
                 <Actions>
-                  <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="特殊1和其他2踩塔" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3000">
+                  <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="去踩塔" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3000">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${var:p3_buff_type}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:p3_tower_get}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
@@ -224,12 +224,12 @@
               </Trigger>
               <Trigger Enabled="true" Name="点名1消失：点名3踩塔-&gt;点名2放塔" Id="b428570f-ab7d-402a-a2e3-e940c52ec867" RegularExpression="^.{15}StatusRemove 1E:(BBC):(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):00:(?&lt;effect&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="5000">
                 <Actions>
-                  <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="点名3踩塔" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3000">
+                  <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="去踩塔" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3000">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:p3_buff_type}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="2" OBSEndPoint="" UseTTSTextExpression="点名2放塔" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="2000">
+                  <Action OrderNumber="2" OBSEndPoint="" UseTTSTextExpression="去放塔" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="2000">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:p3_buff_type}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
@@ -239,12 +239,12 @@
               </Trigger>
               <Trigger Enabled="true" Name="点名2消失：点名1踩塔-&gt;点名3放塔" Id="96c1a86c-e5d6-4f74-8d6f-e541f2076d51" RegularExpression="^.{15}StatusRemove 1E:(BBD):(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):00:(?&lt;effect&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="5000">
                 <Actions>
-                  <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="点名1踩塔" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3000">
+                  <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="去踩塔" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3000">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:p3_buff_type}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="2" OBSEndPoint="" UseTTSTextExpression="点名3放塔" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="2000">
+                  <Action OrderNumber="2" OBSEndPoint="" UseTTSTextExpression="去放塔" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="2000">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:p3_buff_type}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
@@ -263,6 +263,94 @@
             </Triggers>
           </Folder>
         </Folders>
+        <Triggers />
+      </Folder>
+      <Folder Id="44b93cb1-dd09-4298-a3b6-881a8e3c72a5" Name="P5：骑神" Enabled="true">
+        <Folders>
+          <Folder Id="29b94bb0-b62f-4e97-a95f-390a5450b0c3" Name="1运" Enabled="true">
+            <Folders>
+              <Folder Id="2597f3c0-60b9-40b4-a9e4-573929655359" Name="点名" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Sequential="True" Name="雷点名" Id="b08ccc63-ae18-4932-91e3-5cceb37fd519" RegularExpression="^.{15}StatusAdd 1A:(B11):(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):00:(?&lt;effect&gt;[^:]*):" RefirePeriodExpression="100">
+                    <Actions>
+                      <Action OrderNumber="1" UseTTSTextExpression="雷点名" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" UseTTSTextExpression="远离人群" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="10000">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers>
+              <Trigger Enabled="true" Name="八方" Id="c1ab74cd-eecc-4e66-937c-893f435f8bf4" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(63CA):(?&lt;skill&gt;[^:]*):">
+                <Actions>
+                  <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="八方" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="旋风" Id="a8a6f87a-0e06-447b-9ce6-55d0771a99a6" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6B8B):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="旋风" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" UseTTSTextExpression="走走走" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="11bb6c68-dd91-4f87-93aa-d772aa2f73e1" Name="2运" Enabled="true">
+            <Folders>
+              <Folder Id="5dd27921-373c-4ffd-bb66-cebf6f6e57d9" Name="点名" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Sequential="True" Name="死宣点名" Id="6ecb446b-a497-4ea9-b1ce-85a62c4ffea2" RegularExpression="^.{15}StatusAdd 1A:(BA0):(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):00:(?&lt;effect&gt;[^:]*):" Scheduling="FromLastAction" RefirePeriodExpression="50">
+                    <Actions>
+                      <Action OrderNumber="1" UseTTSTextExpression="死宣点名" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers>
+              <Trigger Enabled="true" Name="背对" Id="db88a4e5-6061-46a3-9ef9-07e2f5b78471" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(63D0):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="背对" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers />
+      </Folder>
+      <Folder Id="249be7e3-3fdb-4ef2-914c-482a20d82360" Name="P6：骑龙神" Enabled="true">
+        <Folders />
         <Triggers />
       </Folder>
     </Folders>
