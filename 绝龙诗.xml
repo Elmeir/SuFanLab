@@ -359,31 +359,7 @@
         <Triggers />
       </Folder>
       <Folder Id="5a66a9b2-7e4f-4cad-b12e-5f44bb3be091" Name="P6：双龙（测试版）" Enabled="true">
-        <Folders>
-          <Folder Id="6ce88186-82d6-448a-919e-a1eabb17cfc8" Name="调试中" Enabled="true">
-            <Folders />
-            <Triggers>
-              <Trigger Enabled="true" Name="邪龙冲：左半场安全" Id="0501bfed-f870-456d-a959-8ddabc367376" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D3E):(?&lt;skill&gt;[^:]*):[^:]*:[^:]*:4\.70:111\.00:134\.00" PeriodRefire="Deny" RefirePeriodExpression="1000">
-                <Actions>
-                  <Action OrderNumber="1" UseTTSTextExpression="左半场" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
-              </Trigger>
-              <Trigger Enabled="true" Name="圣龙冲：右半场安全" Id="f1c5929a-1d05-46e9-bf0e-67dd49e3e34e" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D3F):(?&lt;skill&gt;[^:]*):[^:]*:[^:]*:4\.70:100\.00:134\.00" PeriodRefire="Deny" RefirePeriodExpression="1000">
-                <Actions>
-                  <Action OrderNumber="1" UseTTSTextExpression="右半场" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
-              </Trigger>
-            </Triggers>
-          </Folder>
-        </Folders>
+        <Folders />
         <Triggers>
           <Trigger Enabled="true" Name="44分摊" Id="0c0c8cd4-5a79-485d-87c2-bb247de409f8" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D41|6D43):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
@@ -392,34 +368,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
-          </Trigger>
-          <Trigger Enabled="true" Name="拉线" Id="7f788cd1-4833-4814-8e52-1bbb05b1270d" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;id&gt;6D32|6D33|6D34|6D35):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
-            <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="拉线" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="2" UseTTSTextExpression="双T集合" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="1000">
-                <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="6D33" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="6D35" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                </Condition>
-              </Action>
-              <Action OrderNumber="3" UseTTSTextExpression="ST死刑" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
-                <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="6D33" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="6D35" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
-                </Condition>
-              </Action>
-              <Action OrderNumber="4" UseTTSTextExpression="MT死刑" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
-                <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="6D35" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="6D33" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
-                </Condition>
-              </Action>
-            </Actions>
-            <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="辣翅" Id="0b7faba2-083c-4a71-bfbb-5baede37c27a" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D2B|6D2C):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
@@ -428,7 +376,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="辣尾" Id="617f3efa-bd28-4850-9949-7bb5d05b323c" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D2D|6D2E):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
@@ -437,7 +384,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="圣龙右翅：下半场安全" Id="51afad07-86ed-4acc-822d-eb7934694c49" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;id&gt;6D26|6D27):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
@@ -456,7 +402,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="圣龙左翅：上半场安全" Id="e5c9769f-8dd3-455b-bed3-7f38a51d0c3a" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;id&gt;6D23|6D24):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
@@ -475,7 +420,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
