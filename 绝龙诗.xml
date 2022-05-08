@@ -358,44 +358,136 @@
         <Folders />
         <Triggers />
       </Folder>
-      <Folder Id="5a66a9b2-7e4f-4cad-b12e-5f44bb3be091" Name="P6：双龙（测试版）" Enabled="true">
-        <Folders />
+      <Folder Id="5a66a9b2-7e4f-4cad-b12e-5f44bb3be091" Name="P6：双龙" Enabled="true">
+        <Folders>
+          <Folder Id="5317e8bd-ce4a-4cb1-8720-44f132cf8768" Name="播报" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Sequential="True" Name="拉线死刑播报" Id="42b6eabc-3014-495a-bc57-ad7a02f777a6" RegularExpression="" Scheduling="FromLastAction" PeriodRefire="Deny" RefirePeriodExpression="5000">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="拉线" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="拉线死刑" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" UseTTSTextExpression="双T集合" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="1000" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:拉线死刑[1]}" ExpressionTypeL="String" ExpressionR="6D33" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:拉线死刑[2]}" ExpressionTypeL="String" ExpressionR="6D35" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" UseTTSTextExpression="MT死刑" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:拉线死刑[1]}" ExpressionTypeL="String" ExpressionR="6D33" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" UseTTSTextExpression="ST死刑" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:拉线死刑[2]}" ExpressionTypeL="String" ExpressionR="6D35" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="6" ListVariableName="拉线死刑" OBSEndPoint="" VariableOp="SetString" TableVariableOp="Resize" TableVariableName="拉线死刑" TableVariableX="0" TableVariableY="0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="4f4c44ad-4e15-411d-8760-8f1ada429a4e" Name="点名" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Sequential="True" Name="黑点名（分散）" Id="411e11d1-6505-4ef4-848a-9880352ba16a" RegularExpression="^.{15}StatusAdd 1A:(AC6):(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):00:(?&lt;effect&gt;[^:]*):" Scheduling="FromLastAction" RefirePeriodExpression="50">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="分散点名" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Sequential="True" Name="白点名（分摊）" Id="5de95b32-5594-40ee-abb0-441b62202570" RegularExpression="^.{15}StatusAdd 1A:(AC7):(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):00:(?&lt;effect&gt;[^:]*):" Scheduling="FromLastAction" RefirePeriodExpression="50">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="分摊点名" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Sequential="True" Name="亚拉戈病毒" Id="7ecda30c-6a1c-4507-b611-e4036e1b61b9" RegularExpression="^.{15}StatusAdd 1A:(B50):(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):" Scheduling="FromLastAction" RefirePeriodExpression="50">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="毒毒毒" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
         <Triggers>
-          <Trigger Enabled="true" Name="44分摊" Id="0c0c8cd4-5a79-485d-87c2-bb247de409f8" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D41|6D43):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Name="44分摊" Id="31faa067-991a-46a8-8138-8fb168fb5208" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D41|6D43):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="44分摊" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="四四分摊" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="辣翅" Id="0b7faba2-083c-4a71-bfbb-5baede37c27a" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D2B|6D2C):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Sequential="True" Name="拉线死刑" Id="f9fb420d-1db1-4279-ac43-7f6662f994e5" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;id&gt;6D32|6D33|6D34|6D35):(?&lt;skill&gt;[^:]*):" Scheduling="FromLastAction" RefirePeriodExpression="50">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="去中间" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="拉线死刑" ListVariableExpression="${id}" UseTTSTextExpression="点名1" TableVariableOp="Set" TableVariableName="拉线死刑" TableVariableExpression="${id}" TableVariableX="1" TableVariableY="${tvar:拉线死刑.height}+1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="拉线死刑" ListVariableExpression="${id}" UseTTSTextExpression="点名1" TableVariableOp="Set" TableVariableName="拉线死刑" TableVariableExpression="${id}" TableVariableX="1" TableVariableY="${tvar:拉线死刑.height}+1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="42b6eabc-3014-495a-bc57-ad7a02f777a6" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:拉线死刑.size}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="辣翅" Id="4cdfb05b-c9bc-485e-b127-c1a9d510fc37" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D2B|6D2C):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="去中间去中间" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="辣尾" Id="617f3efa-bd28-4850-9949-7bb5d05b323c" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D2D|6D2E):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Name="辣尾" Id="bdf9282d-5a45-4b67-8771-353453171a29" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D2D|6D2E):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="去两边" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="去两边去两边" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="圣龙右翅：下半场安全" Id="51afad07-86ed-4acc-822d-eb7934694c49" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;id&gt;6D26|6D27):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Name="圣龙冲：中间" Id="fd9594f5-22ea-4c31-84be-eea6b7bd695f" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D3E|6D3F):(?&lt;skill&gt;[^:]*):[^:]*:[^:]*:[^:]*:100\.00:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="中间俯冲" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="圣龙右翅：下半场安全" Id="144cea7d-fae0-413c-844b-cb80a1d6c7e3" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;id&gt;6D26|6D27):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="下半场" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" UseTTSTextExpression="最近死刑" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="1000">
+              <Action OrderNumber="2" UseTTSTextExpression="最近死刑远离远离" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="1000">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="6D26" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" UseTTSTextExpression="最远死刑" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="3" UseTTSTextExpression="最远死刑靠近靠近" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="6D27" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
@@ -403,20 +495,36 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="圣龙左翅：上半场安全" Id="e5c9769f-8dd3-455b-bed3-7f38a51d0c3a" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;id&gt;6D23|6D24):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Name="圣龙左翅：上半场安全" Id="7bd75326-ff65-4293-a286-3d3563cbd9a3" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;id&gt;6D23|6D24):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="上半场" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" UseTTSTextExpression="最近死刑" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="1000">
+              <Action OrderNumber="2" UseTTSTextExpression="最近死刑远离远离" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="1000">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="6D23" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" UseTTSTextExpression="最远死刑" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="3" UseTTSTextExpression="最远死刑靠近靠近" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="6D24" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="双龙冲：左边" Id="bd2534f4-d4a0-4271-9dfb-740fabd5a4da" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D3E|6D3F):(?&lt;skill&gt;[^:]*):[^:]*:[^:]*:[^:]*:89\.00:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="左边俯冲" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="双龙冲：右边" Id="5ad76207-e1e6-4493-ba68-7a37104ee174" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D3E|6D3F):(?&lt;skill&gt;[^:]*):[^:]*:[^:]*:[^:]*:111\.00:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="右边俯冲" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
