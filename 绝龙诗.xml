@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="e62a5109-df3e-4c90-8418-3426d262321b" Name="绝龙诗" Enabled="true">
+  <ExportedFolder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^968$" Id="e62a5109-df3e-4c90-8418-3426d262321b" Name="绝龙诗" Enabled="true">
     <Folders>
       <Folder Id="eb08eec1-e3b1-469c-b9e4-4d056b3c06a2" Name="P1：门神" Enabled="true">
         <Folders />
@@ -50,7 +50,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="防击退" Id="273dbcd9-970d-4815-b599-15188133386b" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(62DC):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Name="防击退" Id="273dbcd9-970d-4815-b599-15188133386b" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(62DC):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="40000">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="防击退" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -489,7 +489,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="黑点名（分散）" Id="8870975a-42b9-49a3-96b7-8d1e0a909663" RegularExpression="^.{15}StatusAdd 1A:(AC6):(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):00:(?&lt;effect&gt;[^:]*):" Scheduling="FromLastAction" RefirePeriodExpression="50">
                 <Actions>
@@ -528,7 +527,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -548,7 +546,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="非黑白点名标记" Id="c3d06a6e-e61f-4627-ab5c-285fd0517585" RegularExpression="" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="5000">
                 <Actions>
@@ -563,7 +560,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="非黑白排序" Id="f8339e74-2af0-483c-ae0d-806a3d2bcb03" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000">
                 <Actions>
@@ -574,7 +570,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="黑点名标记" Id="19a0fde8-5b1b-4e39-accf-4f15450cf1f1" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000">
                 <Actions>
@@ -595,7 +590,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -744,7 +738,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -764,13 +757,12 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
     </Folders>
     <Triggers>
-      <Trigger Enabled="true" Name="团灭重置" Id="dc7ce1a4-9b72-46b2-8c68-fb4470dbefe0" RegularExpression="^.{15}Director 21:.{8}:400000(03|1[026])">
+      <Trigger Enabled="false" Name="团灭重置" Id="dc7ce1a4-9b72-46b2-8c68-fb4470dbefe0" RegularExpression="^.{15}Director 21:.{8}:400000(03|1[026])">
         <Actions>
           <Action OrderNumber="1" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="11af403b-c964-436d-9ff8-b6ac4075f61a" TriggerForce="regexp" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
@@ -780,7 +772,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Name="清除标记" Id="11af403b-c964-436d-9ff8-b6ac4075f61a" RegularExpression="">
         <Actions>
@@ -810,7 +801,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
     </Triggers>
   </ExportedFolder>
