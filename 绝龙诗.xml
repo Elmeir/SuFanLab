@@ -50,7 +50,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="防击退" Id="273dbcd9-970d-4815-b599-15188133386b" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(62DC):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="40000">
+          <Trigger Enabled="false" Name="防击退" Id="273dbcd9-970d-4815-b599-15188133386b" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(62DC):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="40000">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="防击退" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -530,7 +530,7 @@
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="f2b70a73-addf-4ce5-bace-02578ad31b4a" Name="标记（需要鲶鱼精邮差）" Enabled="false">
+          <Folder Id="f2b70a73-addf-4ce5-bace-02578ad31b4a" Name="标记（需要开启手动勾选，依赖鲶鱼精邮差）" Enabled="false">
             <Folders />
             <Triggers>
               <Trigger Enabled="true" Sequential="True" Name="白点名标记" Id="655b251f-3761-44a5-acf3-abf063ffb99f" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000">
@@ -692,7 +692,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="P6开始：配置" Id="d0edf51f-6da9-456c-8af3-cebadfffb3b6" RegularExpression="If you believe that eliminating me will undo a thousand years of strife and suffering, then you are a fool\.$|ワシを排せば、この戦が終わり、千年の禍根が断てるとでも？もうやめようではないか、光の使徒よ……。$">
+          <Trigger Enabled="true" Name="P6开始：配置" Id="d0edf51f-6da9-456c-8af3-cebadfffb3b6" RegularExpression="If you believe that eliminating me will undo a thousand years of strife and suffering, then you are a fool\.$|騎神トールダン:ワシを排せば、この戦が終わり、千年の禍根が断てるとでも？ もうやめようではないか、光の使徒よ……。$">
             <Actions>
               <Action OrderNumber="1" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="5b4aaa61-b80a-47d6-87d8-ef74cd3c47c4" TriggerForce="regexp" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
