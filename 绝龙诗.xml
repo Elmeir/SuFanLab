@@ -50,7 +50,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="false" Name="防击退" Id="273dbcd9-970d-4815-b599-15188133386b" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(62DC):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="40000">
+          <Trigger Enabled="true" Name="防击退" Id="273dbcd9-970d-4815-b599-15188133386b" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(62DC):(?&lt;skill&gt;[^:]*):" PeriodRefire="Deny" RefirePeriodExpression="40000">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="防击退" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -368,7 +368,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="TargetIcon" Id="b4135b6f-78e5-4c97-8517-b3441d538016" RegularExpression="^.{15}TargetIcon 1B:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):0000:[^:]*:(?&lt;id&gt;[^:]*):" Scheduling="FromLastAction">
+          <Trigger Enabled="false" Sequential="True" Name="TargetIcon" Id="b4135b6f-78e5-4c97-8517-b3441d538016" RegularExpression="^.{15}TargetIcon 1B:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):0000:[^:]*:(?&lt;id&gt;[^:]*):" Scheduling="FromLastAction">
             <Actions>
               <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="P5点名" ListVariableExpression="${id}" UseTTSTextExpression="点名1" TableVariableOp="Set" TableVariableName="拉线死刑" TableVariableExpression="${id}" TableVariableX="1" TableVariableY="${tvar:拉线死刑.height}+1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
@@ -395,7 +395,24 @@
       </Folder>
       <Folder Id="9bb64606-ee32-40f6-a385-e775974324ba" Name="P7：骑龙神" Enabled="true">
         <Folders />
-        <Triggers />
+        <Triggers>
+          <Trigger Enabled="true" Name="月环" Id="a840a30c-cff0-4f74-9da5-fd5206694d70" RegularExpression="^.{15}StatusAdd 1A:(808):(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):12B">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="月环月环" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="钢铁" Id="da80ab3d-b831-40a1-96b1-e11e46852676" RegularExpression="^.{15}StatusAdd 1A:(808):(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):12A">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="钢铁钢铁" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
       </Folder>
       <Folder Id="5a66a9b2-7e4f-4cad-b12e-5f44bb3be091" Name="P6：双龙" Enabled="true">
         <Folders>
