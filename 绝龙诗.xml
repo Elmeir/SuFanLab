@@ -485,7 +485,7 @@
                   <Action OrderNumber="4" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="白点名排序" ListVariableExpression="${var:${bname}}" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="5" ListVariableOp="SortNumericAsc" ListVariableName="白点名排序" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
+                  <Action OrderNumber="5" ListVariableOp="SortAlphaAsc" ListVariableName="白点名排序" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="6" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="655b251f-3761-44a5-acf3-abf063ffb99f" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="50" Asynchronous="False">
@@ -523,7 +523,7 @@
                   <Action OrderNumber="4" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="黑点名排序" ListVariableExpression="${var:${bname}}" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="5" ListVariableOp="SortNumericAsc" ListVariableName="黑点名排序" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
+                  <Action OrderNumber="5" ListVariableOp="SortAlphaAsc" ListVariableName="黑点名排序" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="6" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="19a0fde8-5b1b-4e39-accf-4f15450cf1f1" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="50" Asynchronous="False">
@@ -552,7 +552,7 @@
             <Triggers>
               <Trigger Enabled="true" Sequential="True" Name="白点名标记" Id="655b251f-3761-44a5-acf3-abf063ffb99f" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000">
                 <Actions>
-                  <Action OrderNumber="1" ListVariableOp="SortNumericAsc" ListVariableName="白点名排序" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
+                  <Action OrderNumber="1" ListVariableOp="SortAlphaAsc" ListVariableName="白点名排序" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/marking attack1 &lt;${var:优先${lvar:白点名排序[1]}}&gt;" NamedCallbackName="mark" NamedCallbackParam="{&quot;ActorID&quot;:0x${tvar:白点名[1][1]},&quot;MarkType&quot;:9}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="10" Asynchronous="False">
@@ -566,7 +566,7 @@
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="非黑白点名标记" Id="c3d06a6e-e61f-4627-ab5c-285fd0517585" RegularExpression="" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="5000">
                 <Actions>
-                  <Action OrderNumber="1" ListVariableOp="SortNumericAsc" ListVariableName="非黑白点名排序" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
+                  <Action OrderNumber="1" ListVariableOp="SortAlphaAsc" ListVariableName="非黑白点名排序" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/marking attack1 &lt;${var:优先${lvar:白点名排序[1]}}&gt;" NamedCallbackName="mark" NamedCallbackParam="{&quot;ActorID&quot;:0x${lvar:actor_list[1]},&quot;MarkType&quot;:6}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="10" Asynchronous="False">
@@ -649,7 +649,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="圣龙冲：中间" Id="fd9594f5-22ea-4c31-84be-eea6b7bd695f" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D3E|6D3F):(?&lt;skill&gt;[^:]*):[^:]*:[^:]*:[^:]*:100\.00:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="false" Name="圣龙冲：中间" Id="fd9594f5-22ea-4c31-84be-eea6b7bd695f" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D3E|6D3F):(?&lt;skill&gt;[^:]*):[^:]*:[^:]*:[^:]*:100\.00:" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="中间俯冲" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -693,7 +693,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="双龙冲：左边" Id="bd2534f4-d4a0-4271-9dfb-740fabd5a4da" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D3E|6D3F):(?&lt;skill&gt;[^:]*):[^:]*:[^:]*:[^:]*:89\.00:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="false" Name="双龙冲：左边" Id="bd2534f4-d4a0-4271-9dfb-740fabd5a4da" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D3E|6D3F):(?&lt;skill&gt;[^:]*):[^:]*:[^:]*:[^:]*:89\.00:" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="左边俯冲" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -701,7 +701,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="双龙冲：右边" Id="5ad76207-e1e6-4493-ba68-7a37104ee174" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D3E|6D3F):(?&lt;skill&gt;[^:]*):[^:]*:[^:]*:[^:]*:111\.00:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="false" Name="双龙冲：右边" Id="5ad76207-e1e6-4493-ba68-7a37104ee174" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(6D3E|6D3F):(?&lt;skill&gt;[^:]*):[^:]*:[^:]*:[^:]*:111\.00:" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="右边俯冲" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -790,7 +790,7 @@
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Name="清除标记" Id="11af403b-c964-436d-9ff8-b6ac4075f61a" RegularExpression="">
+      <Trigger Enabled="false" Name="清除标记" Id="11af403b-c964-436d-9ff8-b6ac4075f61a" RegularExpression="">
         <Actions>
           <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/marking off &lt;1&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="false" Grouping="Or" />
