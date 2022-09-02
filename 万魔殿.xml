@@ -628,7 +628,7 @@
                   <Folder Id="10528643-2a54-45df-aa40-87890b56ccda" Name="延迟火" Enabled="true">
                     <Folders />
                     <Triggers>
-                      <Trigger Enabled="true" Name="Conceptual Tetraflare（四重火）" Id="e5288542-3390-42b8-91a1-6423d9996a1b" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):7915:(?&lt;skill&gt;[^:]*):">
+                      <Trigger Enabled="true" Name="Conceptual Tetraflare（四重火）" Id="e5288542-3390-42b8-91a1-6423d9996a1b" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(7915|7916):(?&lt;skill&gt;[^:]*):">
                         <Actions>
                           <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="二二分摊" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                             <Condition Enabled="false" Grouping="Or" />
@@ -636,14 +636,13 @@
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
                       </Trigger>
-                      <Trigger Enabled="true" Name="Conceptual Octaflare（八重火）" Id="a2d9b310-3c5d-4bb6-8636-b94e761223f7" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):7914:(?&lt;skill&gt;[^:]*):">
+                      <Trigger Enabled="true" Name="Conceptual Octaflare（八重火）" Id="a2d9b310-3c5d-4bb6-8636-b94e761223f7" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(7914):(?&lt;skill&gt;[^:]*):">
                         <Actions>
                           <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="分散" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -723,7 +722,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Sequential="True" Name="Manifold Flames（随机点名）" Id="0cd65f05-5a68-4eb2-8981-4443b7fe80b9" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):7921:(?&lt;skill&gt;[^:]*):">
                         <Actions>
@@ -740,7 +738,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Sequential="True" Name="Hemitheos's Flare（易伤）" Id="f3a154cb-96da-41bd-8223-8692b808fb72" RegularExpression="^.{15}ActionEffect 15:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):72CE:(?&lt;skill&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):(?&lt;bid&gt;[^:]*):" Scheduling="FromLastAction" RefirePeriodExpression="10">
                         <Actions>
@@ -749,7 +746,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="Nest of Flamevipers（水波）" Id="bfa72cdf-8564-43b3-bd5c-b30349bfa70a" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):791F:(?&lt;skill&gt;[^:]*):">
                         <Actions>
@@ -758,16 +754,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
-                      </Trigger>
-                      <Trigger Enabled="true" Name="Tetraflare（二二分摊）" Id="f0c85945-b1d5-48f6-be6a-0a1fc25d6fd0" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):791E:(?&lt;skill&gt;[^:]*):">
-                        <Actions>
-                          <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="二二分摊" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
-                            <Condition Enabled="false" Grouping="Or" />
-                          </Action>
-                        </Actions>
-                        <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -789,7 +775,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -820,7 +805,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="Octaflare（分散）" Id="b43b67b5-91a0-4062-b2a3-7ff2097f5ab2" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):791D:(?&lt;skill&gt;[^:]*):">
                         <Actions>
@@ -829,7 +813,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -845,7 +828,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="true" Name="Conceptual Diflare（四四分摊）" Id="f12eda40-acd1-47f1-9872-d21275283d06" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):7917:(?&lt;skill&gt;[^:]*):">
                             <Actions>
@@ -854,25 +836,14 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
-                          <Trigger Enabled="true" Name="Conceptual Tetraflare（二二分摊）" Id="384d108d-501c-4f4b-a5f5-592d16ddf3db" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):7915:(?&lt;skill&gt;[^:]*):">
-                            <Actions>
-                              <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="二二分摊" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
-                                <Condition Enabled="false" Grouping="Or" />
-                              </Action>
-                            </Actions>
-                            <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
-                          </Trigger>
-                          <Trigger Enabled="true" Name="Quadrupedal Impact（击退）" Id="d4afcc9d-6906-4093-8762-2005aff767e5" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):7A05:(?&lt;skill&gt;[^:]*):">
+                          <Trigger Enabled="true" Name="Quadrupedal Impact（击退）" Id="d4afcc9d-6906-4093-8762-2005aff767e5" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):7A04:(?&lt;skill&gt;[^:]*):">
                             <Actions>
                               <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="靠近" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                                 <Condition Enabled="false" Grouping="Or" />
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                         </Triggers>
                       </Folder>
@@ -907,7 +878,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                         </Triggers>
                       </Folder>
@@ -984,7 +954,7 @@
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
                           </Trigger>
-                          <Trigger Enabled="true" Sequential="True" Name="文字播报" Id="3f9b8e23-3830-433e-ac9c-8f95ba58a650" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000">
+                          <Trigger Enabled="true" Sequential="True" Name="文字播报（依赖鲶鱼精邮差）" Id="3f9b8e23-3830-433e-ac9c-8f95ba58a650" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000">
                             <Actions>
                               <Action OrderNumber="1" ListVariableOp="Join" ListVariableName="torch_flame_1" ListVariableTarget="torch_flame_text_1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
                                 <Condition Enabled="false" Grouping="Or" />
@@ -1062,7 +1032,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="true" Name="Fourfold Fires（初始化）" Id="baa7256a-1188-4d1f-9adf-070503fc5cef" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):78F2:(?&lt;skill&gt;[^:]*):">
                             <Actions>
@@ -1071,9 +1040,8 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
-                          <Trigger Enabled="true" Sequential="True" Name="文字播报" Id="81665991-5629-40e8-be91-eab249bedbc7" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="50">
+                          <Trigger Enabled="true" Sequential="True" Name="文字播报（依赖鲶鱼精邮差）" Id="81665991-5629-40e8-be91-eab249bedbc7" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="50">
                             <Actions>
                               <Action OrderNumber="1" ListVariableOp="Join" ListVariableName="Cthonic_Vent_1" ListVariableTarget="Cthonic_Vent_text_1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
                                 <Condition Enabled="false" Grouping="Or" />
@@ -1095,7 +1063,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="true" Sequential="True" Name="重置" Id="1444d71d-38dc-4bdc-b23a-8a507f290742" RegularExpression="">
                             <Actions>
@@ -1113,7 +1080,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                         </Triggers>
                       </Folder>
