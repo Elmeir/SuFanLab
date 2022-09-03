@@ -728,12 +728,17 @@
                           <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="分散" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="2" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="引导" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="7000" Asynchronous="False">
+                          <Action OrderNumber="2" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="引导" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="6000" Asynchronous="False">
                             <Condition Enabled="true" Grouping="Or">
                               <ConditionSingle Enabled="true" ExpressionL="${lvar:Hemitheos's Flare.indexof(${_ffxivplayer})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                             </Condition>
                           </Action>
-                          <Action OrderNumber="3" ListVariableName="Hemitheos's Flare" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" ExecutionDelayExpression="1000" Asynchronous="False">
+                          <Action OrderNumber="3" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="远离" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${lvar:Hemitheos's Flare.indexof(${_ffxivplayer})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="4" ListVariableName="Hemitheos's Flare" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" ExecutionDelayExpression="1000" Asynchronous="False">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
@@ -818,7 +823,7 @@
                   </Folder>
                   <Folder Id="4cde62b4-6ab4-4e5e-8b73-754462d92e19" Name="变身+组合技" Enabled="true">
                     <Folders>
-                      <Folder Id="634c4cd3-ff4e-450c-b7c1-f5334e54c6ff" Name="车车" Enabled="true">
+                      <Folder Id="634c4cd3-ff4e-450c-b7c1-f5334e54c6ff" Name="兽形" Enabled="true">
                         <Folders />
                         <Triggers>
                           <Trigger Enabled="true" Name="Quadrupedal Crush（跳+地震）" Id="91ae0e27-ef77-4ce6-926e-8e84bb9a2f39" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):7A05:(?&lt;skill&gt;[^:]*):">
@@ -878,6 +883,16 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="Crown of the Gorgon（全屏石化）" Id="5d9d6445-3059-4d22-a548-1048ee83af3b" RegularExpression="^.{15}StatusAdd 1A:(D18):(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):">
+                            <Actions>
+                              <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="石化，出去" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="30000">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
                           </Trigger>
                         </Triggers>
                       </Folder>
@@ -1077,6 +1092,69 @@
                               </Action>
                               <Action OrderNumber="4" ListVariableName="Cthonic_Vent_count" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
                                 <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                        </Triggers>
+                      </Folder>
+                      <Folder Id="77f5b6c3-03da-42ff-84f7-57443fca02f2" Name="Blazing Footfalls" Enabled="true">
+                        <Folders />
+                        <Triggers>
+                          <Trigger Enabled="true" Name="Quadrupedal Crush（地震）" Id="19d519f0-7a1b-4868-b7be-3e037fc7b9a6" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(793D):(?&lt;skill&gt;[^:]*):[^:]*:[^:]*:[^:]*:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):">
+                            <Actions>
+                              <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="钢铁,C" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="11000">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="100.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="80.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="2" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="钢铁,D" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="120.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="100.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="3" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="钢铁,A" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="100.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="80.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="4" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="钢铁,B" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="80.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="100.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="Quadrupedal Impact（击退）" Id="369148d3-9e24-4538-b39d-7d8a9590e020" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(793D):(?&lt;skill&gt;[^:]*):[^:]*:[^:]*:[^:]*:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):">
+                            <Actions>
+                              <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="击退,A" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="11000">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="100.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="80.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="2" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="击退,B" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="120.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="100.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="3" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="击退,C" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="100.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="80.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="4" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="击退,D" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="80.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="100.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
