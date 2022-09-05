@@ -934,7 +934,7 @@
                       </Trigger>
                     </Triggers>
                   </Folder>
-                  <Folder Id="8ff73187-9662-436b-8ce7-6ecc82cebbd9" Name="实验性功能（很强！前提是能用）" Enabled="false">
+                  <Folder Id="8ff73187-9662-436b-8ce7-6ecc82cebbd9" Name="实验性功能" Enabled="false">
                     <Folders>
                       <Folder Id="457575a7-314b-47a9-9b98-4e2b4ac138a2" Name="Torch Flame（ACT偶尔会读不到）" Enabled="true">
                         <Folders />
@@ -1498,33 +1498,6 @@
                       </Trigger>
                     </Triggers>
                   </Folder>
-                  <Folder Id="714b6a4e-f842-4188-be56-a0e310277a8f" Name="实验性功能" Enabled="false">
-                    <Folders />
-                    <Triggers>
-                      <Trigger Enabled="true" Name="塔" Id="e138bc3c-e350-4c77-824a-2ea39485c772" RegularExpression="^.{17}[^:]{8}:[^:]{8}:[^:]{8}:000000(?&lt;type&gt;[^:]{2}):00000000:">
-                        <Actions>
-                          <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="水" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="28" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="2" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="風" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="32" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="3" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="雷" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="38" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="3A" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                        </Actions>
-                        <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
-                      </Trigger>
-                    </Triggers>
-                  </Folder>
                 </Folders>
                 <Triggers>
                   <Trigger Enabled="true" Sequential="True" Name="Ashing Blaze（左右刀）" Id="fe5364d6-b47d-4bbe-84ef-ba94345386f3" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;id&gt;79D7|79D8):(?&lt;skill&gt;[^:]*):">
@@ -1600,6 +1573,7 @@
                               <ConditionSingle Enabled="true" ExpressionL="${lvar:Natural Alignment[5]}" ExpressionTypeL="String" ExpressionR="1DF" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                               <ConditionSingle Enabled="true" ExpressionL="${lvar:Natural Alignment[5]}" ExpressionTypeL="String" ExpressionR="1DC" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                             </ConditionGroup>
+                            <ConditionSingle Enabled="true" ExpressionL="${lvar:Natural Alignment Count.size}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           </ConditionGroup>
                           <ConditionGroup Enabled="true" Grouping="And">
                             <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="120.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
@@ -1607,6 +1581,7 @@
                               <ConditionSingle Enabled="true" ExpressionL="${lvar:Natural Alignment[6]}" ExpressionTypeL="String" ExpressionR="1DC" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                               <ConditionSingle Enabled="true" ExpressionL="${lvar:Natural Alignment[6]}" ExpressionTypeL="String" ExpressionR="1DF" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                             </ConditionGroup>
+                            <ConditionSingle Enabled="true" ExpressionL="${lvar:Natural Alignment Count.size}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           </ConditionGroup>
                         </Condition>
                       </Action>
@@ -1618,6 +1593,7 @@
                               <ConditionSingle Enabled="true" ExpressionL="${lvar:Natural Alignment[5]}" ExpressionTypeL="String" ExpressionR="1DD" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                               <ConditionSingle Enabled="true" ExpressionL="${lvar:Natural Alignment[5]}" ExpressionTypeL="String" ExpressionR="1DE" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                             </ConditionGroup>
+                            <ConditionSingle Enabled="true" ExpressionL="${lvar:Natural Alignment Count.size}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           </ConditionGroup>
                           <ConditionGroup Enabled="true" Grouping="And">
                             <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="120.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
@@ -1625,6 +1601,7 @@
                               <ConditionSingle Enabled="true" ExpressionL="${lvar:Natural Alignment[6]}" ExpressionTypeL="String" ExpressionR="1DD" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                               <ConditionSingle Enabled="true" ExpressionL="${lvar:Natural Alignment[6]}" ExpressionTypeL="String" ExpressionR="1DE" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                             </ConditionGroup>
+                            <ConditionSingle Enabled="true" ExpressionL="${lvar:Natural Alignment Count.size}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           </ConditionGroup>
                         </Condition>
                       </Action>
@@ -1706,16 +1683,22 @@
           <Action OrderNumber="21" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="5d9d6445-3059-4d22-a548-1048ee83af3b" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="22" ListVariableName="Uplift Count" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+          <Action OrderNumber="22" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="19d519f0-7a1b-4868-b7be-3e037fc7b9a6" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="23" ListVariableName="Natural Alignment Count" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+          <Action OrderNumber="23" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="def469be-bc4b-42c1-b6f3-47d79887b881" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="24" ListVariableName="High Concept Count" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+          <Action OrderNumber="24" ListVariableName="Uplift Count" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="25" ListVariableName="Tyrant's Fire Count" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+          <Action OrderNumber="25" ListVariableName="Natural Alignment Count" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="26" ListVariableName="High Concept Count" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="27" ListVariableName="Tyrant's Fire Count" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
