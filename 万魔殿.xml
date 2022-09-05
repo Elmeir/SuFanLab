@@ -811,7 +811,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -1302,7 +1301,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -1346,7 +1344,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="Imperfection: Alpha" Id="a1f48ace-7037-49b6-b572-9e4eefd1afbd" RegularExpression="^.{15}StatusAdd 1A:D02:(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):">
                         <Actions>
@@ -1385,7 +1382,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="Imperfection: Beta" Id="0f76de92-e855-458e-8c46-90ff755e87fc" RegularExpression="^.{15}StatusAdd 1A:D03:(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):">
                         <Actions>
@@ -1424,7 +1420,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="Multisplice（两人分摊）" Id="32ef6949-6c38-4db9-8bb5-cb32e7ca4a98" RegularExpression="^.{15}StatusAdd 1A:D12:(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):">
                         <Actions>
@@ -1440,7 +1435,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="Supersplice（三人分摊）" Id="5f441ffb-619c-46db-8549-2f42da18b84e" RegularExpression="^.{15}StatusAdd 1A:D13:(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):">
                         <Actions>
@@ -1454,7 +1448,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="High Concept" Id="1bd591c6-548a-458e-97f8-0009b02f4303" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):79AC:(?&lt;skill&gt;[^:]*):">
                         <Actions>
@@ -1463,9 +1456,8 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
-                      <Trigger Enabled="true" Name="Solosplice（单人分摊）" Id="505998af-43c5-4a29-971d-7ad1efa16b90" RegularExpression="^.{15}StatusAdd 1A:D03:(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):">
+                      <Trigger Enabled="true" Name="Solosplice（单人分摊）" Id="505998af-43c5-4a29-971d-7ad1efa16b90" RegularExpression="^.{15}StatusAdd 1A:D11:(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):">
                         <Actions>
                           <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="单人分摊" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                             <Condition Enabled="false" Grouping="Or" />
@@ -1474,7 +1466,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -1491,7 +1482,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Sequential="True" Name="Tyrant's Fire" Id="0f5ec4d2-8ac0-465f-8676-0fbf8c69b54b" RegularExpression="^.{15}ActionEffect 15:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):75F0:[^:]*:[^:]*:(?&lt;bname&gt;[^:]*):" Scheduling="FromLastAction" RefirePeriodExpression="100">
                         <Actions>
@@ -1501,6 +1491,32 @@
                           <Action OrderNumber="2" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="${numeric:ceiling(${lvar:Tyrant's Fire Count.indexof(${_ffxivplayer})}/2)}" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="100" Asynchronous="False">
                             <Condition Enabled="true" Grouping="Or">
                               <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                  <Folder Id="714b6a4e-f842-4188-be56-a0e310277a8f" Name="实验性功能" Enabled="false">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="true" Name="塔" Id="e138bc3c-e350-4c77-824a-2ea39485c772" RegularExpression="^.{17}[^:]{8}:[^:]{8}:[^:]{8}:000000(?&lt;type&gt;[^:]{2}):00000000:">
+                        <Actions>
+                          <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="水" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="28" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="2" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="風" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="32" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="3" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="雷" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="38" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="3A" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                             </Condition>
                           </Action>
                         </Actions>
@@ -1704,7 +1720,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
     </Triggers>
   </ExportedFolder>
