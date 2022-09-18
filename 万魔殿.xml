@@ -9,36 +9,36 @@
               <Folder Id="15548172-f784-4ffe-89ce-4d859654855c" Name="Stones" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Sequential="True" Name="unknown_76df" Id="13a97948-f6d8-4e96-8b7c-d38ccbcb2a55" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;id&gt;7703|7704|7705|7706):(?&lt;skill&gt;[^:]*):[^:]*:[^:]*:[^:]*:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):" Scheduling="FromLastAction" RefirePeriodExpression="50">
+                  <Trigger Enabled="true" Sequential="True" Name="unknown_76df" Id="13a97948-f6d8-4e96-8b7c-d38ccbcb2a55" RegularExpression="^.{15}StartsCasting 14:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;id&gt;7703|7704|7705|7706):(?&lt;skill&gt;[^:]*):[^:]*:[^:]*:[^:]*:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):" Scheduling="FromLastAction" RefirePeriodExpression="10">
                     <Actions>
-                      <Action OrderNumber="1" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="stones_count" ListVariableExpression="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                      <Action OrderNumber="1" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="stones_count" ListVariableExpression="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="2" ListVariableOp="Remove" ListVariableExpressionType="Numeric" ListVariableName="stones_${id}" ListVariableExpression="1" ListVariableIndex="${lvar:stones_${id}.indexof(1)}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                      <Action OrderNumber="2" ListVariableOp="Remove" ListVariableExpressionType="Numeric" ListVariableName="stones_${id}" ListVariableExpression="1" ListVariableIndex="${lvar:stones_${id}.indexof(1)}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="Numeric" ExpressionR="${var:mid}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                           <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="Numeric" ExpressionR="${var:mid}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="3" ListVariableOp="Remove" ListVariableExpressionType="Numeric" ListVariableName="stones_${id}" ListVariableExpression="2" ListVariableIndex="${lvar:stones_${id}.indexof(2)}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                      <Action OrderNumber="3" ListVariableOp="Remove" ListVariableExpressionType="Numeric" ListVariableName="stones_${id}" ListVariableExpression="2" ListVariableIndex="${lvar:stones_${id}.indexof(2)}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="Numeric" ExpressionR="${var:mid}" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                           <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="Numeric" ExpressionR="${var:mid}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="4" ListVariableOp="Remove" ListVariableExpressionType="Numeric" ListVariableName="stones_${id}" ListVariableExpression="4" ListVariableIndex="${lvar:stones_${id}.indexof(4)}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                      <Action OrderNumber="4" ListVariableOp="Remove" ListVariableExpressionType="Numeric" ListVariableName="stones_${id}" ListVariableExpression="4" ListVariableIndex="${lvar:stones_${id}.indexof(4)}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="Numeric" ExpressionR="${var:mid}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                           <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="Numeric" ExpressionR="${var:mid}" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="5" ListVariableOp="Remove" ListVariableExpressionType="Numeric" ListVariableName="stones_${id}" ListVariableExpression="3" ListVariableIndex="${lvar:stones_${id}.indexof(3)}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                      <Action OrderNumber="5" ListVariableOp="Remove" ListVariableExpressionType="Numeric" ListVariableName="stones_${id}" ListVariableExpression="3" ListVariableIndex="${lvar:stones_${id}.indexof(3)}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="Numeric" ExpressionR="${var:mid}" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                           <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="Numeric" ExpressionR="${var:mid}" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="6" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="d5eedf28-032f-4e98-a1ef-a82e4272a18e" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="500" Asynchronous="False">
+                      <Action OrderNumber="6" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="d5eedf28-032f-4e98-a1ef-a82e4272a18e" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="300" Asynchronous="False">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:stones_count.size}" ExpressionTypeL="Numeric" ExpressionR="10" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                         </Condition>
@@ -326,7 +326,7 @@
               <Folder Id="f1e9458e-3aa7-464f-9b5a-103e3853552a" Name="Pathogenic Cells（麻将）" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="false" Sequential="True" Name="TargetIcon" Id="c8fc87cf-9e93-4e4d-b25e-b3fbcf3d0811" RegularExpression="^.{15}TargetIcon 1B:[^:]*:(?&lt;name&gt;[^:]*):0000:0000:(?&lt;id&gt;[^:]*):" Scheduling="FromLastAction" RefirePeriodExpression="10">
+                  <Trigger Enabled="true" Sequential="True" Name="TargetIcon" Id="c8fc87cf-9e93-4e4d-b25e-b3fbcf3d0811" RegularExpression="^.{15}TargetIcon 1B:[^:]*:(?&lt;name&gt;[^:]*):0000:0000:(?&lt;id&gt;[^:]*):" Scheduling="FromLastAction" RefirePeriodExpression="10">
                     <Actions>
                       <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="Pathogenic Cells" ListVariableExpression="${id}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1221,7 +1221,7 @@
                           </Trigger>
                         </Triggers>
                       </Folder>
-                      <Folder Id="77f5b6c3-03da-42ff-84f7-57443fca02f2" Name="Blazing Footfalls（击退+钢铁）" Enabled="true">
+                      <Folder Id="77f5b6c3-03da-42ff-84f7-57443fca02f2" Name="Blazing Footfalls（击退+钢铁）不好用" Enabled="true">
                         <Folders />
                         <Triggers>
                           <Trigger Enabled="true" Sequential="True" Name="Quadrupedal Impact（击退）" Id="19d519f0-7a1b-4868-b7be-3e037fc7b9a6" RegularExpression="^.{15}AOEActionEffect 16:(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):793C:(?&lt;skill&gt;[^:]*):[^:]*:[^:]*:1B:[^:]*:0:0:0:0:0:0:0:0:0:0:0:0:0:0:44:44:0:10000:::(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):">
@@ -1277,7 +1277,7 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="100.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                                 </Condition>
                               </Action>
-                              <Action OrderNumber="10" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="05899d48-6ca2-44e9-b00a-9e2404bb9fe5" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="1000" Asynchronous="False">
+                              <Action OrderNumber="10" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="05899d48-6ca2-44e9-b00a-9e2404bb9fe5" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="500" Asynchronous="False">
                                 <Condition Enabled="true" Grouping="Or">
                                   <ConditionSingle Enabled="true" ExpressionL="${lvar:Blazing Footfalls Count.size}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                 </Condition>
@@ -1316,10 +1316,10 @@
                               <Action OrderNumber="7" ListVariableName="Blazing Footfalls Count" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
                                 <Condition Enabled="false" Grouping="Or" />
                               </Action>
-                              <Action OrderNumber="8" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" VariableName="Blazing Footfalls Skill 1" VariableExpression="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                              <Action OrderNumber="8" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" VariableName="Blazing Footfalls Skill 1" VariableExpression="■" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                                 <Condition Enabled="false" Grouping="Or" />
                               </Action>
-                              <Action OrderNumber="9" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" VariableName="Blazing Footfalls Skill 2" VariableExpression="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                              <Action OrderNumber="9" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" VariableName="Blazing Footfalls Skill 2" VariableExpression="■" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                                 <Condition Enabled="false" Grouping="Or" />
                               </Action>
                               <Action OrderNumber="10" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" VariableName="Blazing Footfalls Position 1" VariableExpression="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
@@ -1425,7 +1425,7 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="100.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                                 </Condition>
                               </Action>
-                              <Action OrderNumber="10" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="05899d48-6ca2-44e9-b00a-9e2404bb9fe5" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="1000" Asynchronous="False">
+                              <Action OrderNumber="10" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="05899d48-6ca2-44e9-b00a-9e2404bb9fe5" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="500" Asynchronous="False">
                                 <Condition Enabled="true" Grouping="Or">
                                   <ConditionSingle Enabled="true" ExpressionL="${lvar:Blazing Footfalls Count.size}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                 </Condition>
@@ -1847,7 +1847,7 @@
                   <Folder Id="fcd49ac3-aa70-4a6f-9654-8b85bf7d37bd" Name="High Concept" Enabled="true">
                     <Folders />
                     <Triggers>
-                      <Trigger Enabled="true" Name="Imperfection: Gamma" Id="e1a349fe-9ce5-4ef0-b5f6-0e2186e5e809" RegularExpression="^.{15}StatusAdd 1A:D04:(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):">
+                      <Trigger Enabled="true" Name="Imperfection: Gamma" Id="e1a349fe-9ce5-4ef0-b5f6-0e2186e5e809" RegularExpression="^.{15}StatusAdd 1A:D04:(?&lt;skill&gt;.*?):(?&lt;duration&gt;[0-9\.]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):">
                         <Actions>
                           <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" VariableName="High Concept Buff" VariableExpression="Gamma L" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                             <Condition Enabled="true" Grouping="Or">
@@ -1892,7 +1892,7 @@
                           <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                       </Trigger>
-                      <Trigger Enabled="true" Name="Imperfection: Alpha" Id="a1f48ace-7037-49b6-b572-9e4eefd1afbd" RegularExpression="^.{15}StatusAdd 1A:D02:(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):">
+                      <Trigger Enabled="true" Name="Imperfection: Alpha" Id="a1f48ace-7037-49b6-b572-9e4eefd1afbd" RegularExpression="^.{15}StatusAdd 1A:D02:(?&lt;skill&gt;.*?):(?&lt;duration&gt;[0-9\.]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):">
                         <Actions>
                           <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" VariableName="High Concept Buff" VariableExpression="Alpha L" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                             <Condition Enabled="true" Grouping="Or">
@@ -1937,7 +1937,7 @@
                           <ConditionSingle Enabled="true" ExpressionL="${bname}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                       </Trigger>
-                      <Trigger Enabled="true" Name="Imperfection: Beta" Id="0f76de92-e855-458e-8c46-90ff755e87fc" RegularExpression="^.{15}StatusAdd 1A:D03:(?&lt;skill&gt;[^:]*):(?&lt;duration&gt;[^:]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):">
+                      <Trigger Enabled="true" Name="Imperfection: Beta" Id="0f76de92-e855-458e-8c46-90ff755e87fc" RegularExpression="^.{15}StatusAdd 1A:D03:(?&lt;skill&gt;.*?):(?&lt;duration&gt;[0-9\.]*):(?&lt;actor&gt;[^:]*):(?&lt;name&gt;[^:]*):(?&lt;bactor&gt;[^:]*):(?&lt;bname&gt;[^:]*):">
                         <Actions>
                           <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" VariableName="High Concept Buff" VariableExpression="Beta L" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                             <Condition Enabled="true" Grouping="Or">
